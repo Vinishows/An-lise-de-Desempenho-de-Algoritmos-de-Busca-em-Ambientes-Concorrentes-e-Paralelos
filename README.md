@@ -2,7 +2,7 @@
 Trabalho de Av3 da cadeira de Computação Paralela
 
 ## Resumo 
-Este trabalho investiga o desempenho de diferentes estratégias para busca de palavras em texto, empregando métodos seriais e paralelos implementados em Java. São analisadas três abordagens principais: um método sequencial na CPU, um método paralelo na CPU utilizando múltiplos núcleos, e uma abordagem massivamente paralela na GPU por meio de OpenCL. A metodologia considera variações nos tamanhos de texto e configurações de hardware para examinar como diferentes paradigmas de processamento afetam a eficiência e escalabilidade. A análise visa fornecer uma visão abrangente sobre a aplicabilidade e os compromissos das técnicas seriais e paralelas para cenários de computação intensiva.
+Este trabalho investiga o desempenho de diferentes estratégias para busca de palavras em texto, empregando métodos seriais e paralelos implementados em Java. São analisadas três abordagens principais: um método sequencial na CPU, um método paralelo na CPU utilizando múltiplos núcleos, e uma abordagem massivamente paralela na GPU por meio de OpenCL. A metodologia considera variações nos tamanhos de texto para examinar como diferentes paradigmas de processamento afetam a eficiência e escalabilidade. A análise visa fornecer uma visão abrangente sobre a aplicabilidade e os compromissos das técnicas seriais e paralelas para cenários de computação intensiva.
 
 ## Introdução
 
@@ -44,10 +44,10 @@ Dessa forma, os resultados obtidos mostram diferenças significativas no desempe
 
 Por outro lado, o ParallelGPU apresentou tempos de execução significativamente maiores, evidenciando o custo de transferência de dados entre a CPU e a GPU, além da sobrecarga associada ao uso do kernel OpenCL para tarefas relativamente pequenas. Este método também apresentou discrepâncias na contagem de ocorrências, como no caso de Moby Dick, indicando possíveis problemas na precisão do processamento paralelo na GPU.
 
-Em síntese, o ParallelCPU mostrou-se a abordagem mais eficiente e confiável para as amostras avaliadas, enquanto o ParallelGPU pode ser mais vantajoso em cenários com dados muito maiores, onde a vantagem do paralelismo massivo compense a sobrecarga inicial. Os resultados destacam a importância de alinhar o método ao contexto e à natureza do problema para maximizar desempenho e precisão.
+Em síntese, o ParallelCPU mostrou-se a abordagem mais eficiente e confiável para as amostras avaliadas, enquanto o ParallelGPU pode ser mais vantajoso em cenários com dados muito maiores, onde a vantagem do paralelismo massivo compense a sobrecarga inicial, mas também foi possivel observar que nem sempre isso será correto. Os resultados destacam a importância de alinhar o método ao contexto e à natureza do problema para maximizar desempenho e precisão.
 
 ## Conclusão 
-Por fim, ressalta-se que os resultados mostraram que o ParallelCPU foi a solução mais eficiente e confiável, apresentando tempos de execução significativamente menores em comparação ao SerialCPU, especialmente em textos maiores. Já o ParallelGPU, apesar de explorar o alto paralelismo das GPUs, demonstrou limitações devido à sobrecarga de transferência de dados e problemas de precisão em algumas situações.
+Por fim, ressalta-se que os resultados mostraram que o ParallelCPU foi a solução mais eficiente e confiável, apresentando tempos de execução significativamente menores em comparação ao SerialCPU. Já o ParallelGPU, apesar de explorar o alto paralelismo das GPUs, demonstrou limitações devido à sobrecarga de transferência de dados e problemas de precisão em algumas situações.
 
 Essas observações destacam que a escolha do método ideal depende do tamanho dos dados e das características do problema. Enquanto o SerialCPU pode ser suficiente para textos pequenos e simples, o ParallelCPU oferece um equilíbrio entre desempenho e confiabilidade em uma ampla gama de cenários. O ParallelGPU, por sua vez, pode ser mais adequado para aplicações envolvendo grandes volumes de dados, onde os benefícios do paralelismo massivo superam seus custos iniciais.
 
