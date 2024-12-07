@@ -52,3 +52,6 @@ Por fim, ressalta-se que os resultados mostraram que o ParallelCPU foi a soluç�
 Essas observações destacam que a escolha do método ideal depende do tamanho dos dados e das características do problema. Enquanto o SerialCPU pode ser suficiente para textos pequenos e simples, o ParallelCPU oferece um equilíbrio entre desempenho e confiabilidade em uma ampla gama de cenários. O ParallelGPU, por sua vez, pode ser mais adequado para aplicações envolvendo grandes volumes de dados, onde os benefícios do paralelismo massivo superam seus custos iniciais.
 
 Os resultados reforçam a importância de compreender as vantagens e limitações de cada abordagem e alinhar sua aplicação às necessidades específicas, maximizando a eficiência computacional e a precisão das soluções desenvolvidas.
+
+## Referências
+- Slides de Aula
