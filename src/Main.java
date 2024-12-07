@@ -80,10 +80,6 @@ public class Main {
             Map<String, Map<String, Long>> performanceData = GraficoDesempenho.loadDataFromCSV("results.csv");
             exibirGrafico(performanceData, "Desempenho de Algoritmos (Busca de Palavra Específica)");
         }
-
-        if (new File("all_words_results.csv").exists()) {
-            System.out.println("Gráfico para 'all_words_results.csv' pode ser gerado manualmente, caso necessário.");
-        }
     }
 
     public static Map<String, Integer> analyzeAllWordsInFile(File file) throws IOException {
@@ -104,7 +100,7 @@ public class Main {
 
     public static void writeResultsToCSV(String filePath, List<String[]> data) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(filePath))) {
-            writer.println("Amostra,Metodo,Ocorrencias,Tempo(ms)");
+            writer.println("Metodo,Amostra,Ocorrencias,Tempo(ms)");
             for (String[] result : data) {
                 writer.println(String.join(",", result));
             }
