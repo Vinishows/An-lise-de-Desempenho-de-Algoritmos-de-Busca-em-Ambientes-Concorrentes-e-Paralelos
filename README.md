@@ -1,4 +1,4 @@
-# # Análise comparativa de algoritmos com uso de paralelismo 
+# Análise comparativa de algoritmos com uso de paralelismo 
 Trabalho de Av3 da cadeira de Computação Paralela
 
 ## Resumo 
